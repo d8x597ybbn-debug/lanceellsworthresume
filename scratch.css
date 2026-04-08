@@ -110,6 +110,10 @@ select {
   color: var(--text);
 }
 
+input::placeholder {
+  color: #91a4bf;
+}
+
 button {
   background: linear-gradient(135deg, var(--accent), #ff9a54);
   color: #fff;
@@ -133,10 +137,18 @@ button:hover {
 
 .toolbar {
   align-items: end;
+  margin-bottom: 1rem;
+}
+
+.toolbar-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  gap: 0.8rem;
+  width: min(100%, 540px);
 }
 
 .stats {
-  margin: 1rem 0;
+  margin: 0 0 1rem;
   flex-wrap: wrap;
 }
 
@@ -153,6 +165,50 @@ button:hover {
 .stat-card span {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.progress-wrap {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.progress-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.progress-copy span {
+  color: var(--muted);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.8rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-2), #7be0d0);
+  transition: width 0.25s ease;
+}
+
+.insight-banner {
+  margin-bottom: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(69, 196, 176, 0.12);
+  color: var(--text);
 }
 
 .goal-list {
@@ -199,6 +255,12 @@ button:hover {
   gap: 0.6rem;
 }
 
+.goal-content p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .toggle-btn {
   background: rgba(69, 196, 176, 0.18);
 }
@@ -212,8 +274,10 @@ button:hover {
     grid-template-columns: 1fr;
   }
 
+  .toolbar-controls,
   .toolbar,
   .goal-item {
+    grid-template-columns: 1fr;
     flex-direction: column;
     align-items: stretch;
   }
