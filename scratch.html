@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Compass Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scratch.css" />
+  </head>
+  <body>
+    <header class="scratch-hero">
+      <a class="home-link" href="index.html">Back to Home</a>
+      <div class="scratch-copy">
+        <p class="tag">Interactive Planner</p>
+        <h1>Career Compass Planner</h1>
+        <p>
+          This interactive page helps organize internship goals, filter tasks by category,
+          and track progress.
+        </p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel controls">
+        <h2>Add a goal</h2>
+        <form id="goalForm">
+          <label for="goalTitle">Goal</label>
+          <input id="goalTitle" name="goalTitle" type="text" placeholder="Update portfolio project" required />
+
+          <label for="goalCategory">Category</label>
+          <select id="goalCategory" name="goalCategory">
+            <option value="Coding">Coding</option>
+            <option value="Design">Design</option>
+            <option value="Career">Career</option>
+            <option value="Networking">Networking</option>
+          </select>
+
+          <label for="goalPriority">Priority</label>
+          <select id="goalPriority" name="goalPriority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <button type="submit">Save goal</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="toolbar">
+          <div>
+            <h2>Goal list</h2>
+            <p>Filter the planner and mark work complete.</p>
+          </div>
+          <label>
+            <span>Show</span>
+            <select id="filterCategory">
+              <option value="All">All</option>
+              <option value="Coding">Coding</option>
+              <option value="Design">Design</option>
+              <option value="Career">Career</option>
+              <option value="Networking">Networking</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="stats" id="stats"></div>
+        <ul class="goal-list" id="goalList"></ul>
+      </section>
+    </main>
+
+    <script src="scratch.js"></script>
+  </body>
+</html>

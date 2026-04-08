@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --bs-body-font-family: "Public Sans", sans-serif;
+  --ink: #1f2430;
+  --sand: #f5efe5;
+  --warm: #bf5c37;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(191, 92, 55, 0.18), transparent 25%),
+    linear-gradient(180deg, #fbf7f2, #f2eadf 70%);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Fraunces", serif;
+}
+
+.glass-nav {
+  background: rgba(255, 250, 244, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(31, 36, 48, 0.08);
+}
+
+.hero-panel,
+.lift-card,
+.stat-panel,
+.gradient-panel {
+  border-radius: 1.75rem;
+}
+
+.hero-panel {
+  background: rgba(255, 252, 248, 0.8);
+  border: 1px solid rgba(31, 36, 48, 0.08);
+  box-shadow: 0 24px 60px rgba(63, 38, 18, 0.1);
+}
+
+.tracking {
+  letter-spacing: 0.14em;
+}
+
+.btn-warm {
+  background: var(--warm);
+  color: #fff;
+}
+
+.btn-warm:hover {
+  background: #a94e2d;
+  color: #fff;
+}
+
+.lift-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lift-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(63, 38, 18, 0.12);
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.9rem 0;
+}
+
+.timeline-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 999px;
+  background: var(--warm);
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.gradient-panel {
+  background: linear-gradient(145deg, #f2c591, #f5e6c9);
+}

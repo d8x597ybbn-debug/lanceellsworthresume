@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Snapshot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="investment.css" />
+  </head>
+  <body>
+    <header class="investment-hero">
+      <a class="home-link" href="index.html">Back to Home</a>
+      <div class="hero-copy">
+        <p class="tag">Market Research Tool</p>
+        <h1>Stock Snapshot</h1>
+        <p>
+          Type in a company name to view key metrics, business notes, and a simple recommendation
+          based on valuation, growth, and profitability.
+        </p>
+        <p>
+          <a class="sec-link" href="https://www.sec.gov/" target="_blank" rel="noreferrer">Visit the SEC website</a>
+        </p>
+      </div>
+    </header>
+
+    <main class="investment-layout">
+      <section class="panel search-panel">
+        <h2>Search a company</h2>
+        <form id="stockForm">
+          <label for="companyInput">Company name</label>
+          <input id="companyInput" type="text" placeholder="Apple" required />
+          <button type="submit">Show analysis</button>
+        </form>
+
+        <div class="quick-list">
+          <button class="quick-btn" data-company="Apple">Apple</button>
+          <button class="quick-btn" data-company="Microsoft">Microsoft</button>
+          <button class="quick-btn" data-company="NVIDIA">NVIDIA</button>
+          <button class="quick-btn" data-company="doTERRA">doTERRA</button>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="company-head">
+          <div>
+            <p class="tag">Company overview</p>
+            <h2 id="companyName">Apple</h2>
+            <p id="companySummary">
+              Large-cap technology company with strong recurring ecosystem revenue and consistent cash flow.
+            </p>
+          </div>
+          <div class="recommendation buy" id="recommendationBadge">Buy</div>
+        </div>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <div class="statement-grid" id="statementGrid"></div>
+
+        <div class="notes-grid">
+          <article class="note-card">
+            <h3>Why it stands out</h3>
+            <p id="strengthNote"></p>
+          </article>
+          <article class="note-card">
+            <h3>Risk to watch</h3>
+            <p id="riskNote"></p>
+          </article>
+          <article class="note-card">
+            <h3>Accounting view</h3>
+            <p id="accountingNote"></p>
+          </article>
+          <article class="note-card wide">
+            <h3>Recommendation</h3>
+            <p id="recommendationText"></p>
+          </article>
+          <article class="note-card wide">
+            <h3>Closest matches</h3>
+            <p id="suggestionText"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="investment.js"></script>
+  </body>
+</html>

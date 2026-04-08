@@ -1,0 +1,208 @@
+:root {
+  --bg: #08111f;
+  --panel: rgba(14, 24, 43, 0.82);
+  --line: rgba(255, 255, 255, 0.12);
+  --text: #f7f9fc;
+  --muted: #b8c5d9;
+  --accent: #ff7a59;
+  --accent-2: #45c4b0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(69, 196, 176, 0.18), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(255, 122, 89, 0.14), transparent 20%),
+    linear-gradient(180deg, #091220, #060b16 68%);
+}
+
+.scratch-hero,
+.layout {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.scratch-hero {
+  padding: 1.5rem 0 2rem;
+}
+
+.home-link {
+  color: var(--muted);
+}
+
+.scratch-copy {
+  padding: 2rem 0 1rem;
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-2);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: "Sora", sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.scratch-copy p {
+  max-width: 54ch;
+  color: var(--muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+input,
+select,
+button {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 0.85rem 0.95rem;
+  font: inherit;
+}
+
+input,
+select {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+button {
+  background: linear-gradient(135deg, var(--accent), #ff9a54);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toolbar,
+.stats,
+.goal-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.toolbar {
+  align-items: end;
+}
+
+.stats {
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 140px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 0.9rem;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.goal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.goal-item {
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.goal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+}
+
+.goal-item.completed h3 {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.goal-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.toggle-btn {
+  background: rgba(69, 196, 176, 0.18);
+}
+
+.delete-btn {
+  background: rgba(255, 122, 89, 0.16);
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar,
+  .goal-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
