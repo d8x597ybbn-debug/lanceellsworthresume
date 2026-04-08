@@ -85,8 +85,12 @@ h3 {
 .waffle-button {
   display: grid;
   grid-template-columns: repeat(3, 0.28rem);
+  align-content: center;
+  justify-content: center;
   gap: 0.26rem;
   padding: 0.7rem;
+  min-width: 2.6rem;
+  min-height: 2.6rem;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--surface);
@@ -100,6 +104,7 @@ h3 {
 }
 
 .waffle-button span {
+  display: block;
   width: 0.28rem;
   height: 0.28rem;
   border-radius: 999px;
@@ -192,8 +197,9 @@ h1 {
   min-width: 132px;
   padding: 0.95rem 1rem;
   border-radius: 20px;
-  background: rgba(248, 252, 255, 0.72);
-  border: 1px solid var(--line);
+  background: rgba(248, 252, 255, 0.92);
+  border: 1px solid rgba(18, 58, 121, 0.12);
+  box-shadow: 0 10px 24px rgba(18, 58, 121, 0.08);
 }
 
 .hero-metrics strong,
