@@ -9,9 +9,11 @@
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(191, 92, 55, 0.18), transparent 25%),
-    linear-gradient(180deg, #fbf7f2, #f2eadf 70%);
+    radial-gradient(circle at top left, rgba(191, 92, 55, 0.14), transparent 24%),
+    radial-gradient(circle at 85% 16%, rgba(48, 80, 125, 0.08), transparent 18%),
+    linear-gradient(180deg, #fcf8f2, #f2eadf 72%);
   color: var(--ink);
+  letter-spacing: -0.01em;
 }
 
 h1,
@@ -25,6 +27,7 @@ h3,
   background: rgba(255, 250, 244, 0.82);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(31, 36, 48, 0.08);
+  box-shadow: 0 8px 20px rgba(63, 38, 18, 0.05);
 }
 
 .hero-panel,
@@ -40,8 +43,18 @@ h3,
   box-shadow: 0 24px 60px rgba(63, 38, 18, 0.1);
 }
 
+.card {
+  border-radius: 1.5rem;
+}
+
 .tracking {
   letter-spacing: 0.14em;
+}
+
+.lead,
+.text-secondary,
+.text-dark-emphasis {
+  line-height: 1.75;
 }
 
 .btn-warm {

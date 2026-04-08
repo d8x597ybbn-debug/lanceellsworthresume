@@ -15,28 +15,64 @@
   <body>
     <header class="hero">
       <nav class="topbar">
-        <a class="brand" href="index.html">Lance Ellsworth</a>
-        <div class="nav-links">
-          <a href="#resume">Resume</a>
-          <a href="#projects">Projects</a>
-          <a href="#insights">Insights</a>
-          <a href="scratch.html">Career Planner</a>
-          <a href="bootstrap.html">Portfolio Preview</a>
-          <a href="investment.html">Stock Snapshot</a>
+        <div class="brand-cluster">
+          <a class="brand" href="index.html">Lance Ellsworth</a>
+          <div class="waffle-menu">
+            <button
+              class="waffle-button"
+              id="waffleButton"
+              type="button"
+              aria-expanded="false"
+              aria-controls="wafflePanel"
+              aria-label="Open quick links"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="waffle-panel" id="wafflePanel" hidden>
+              <a href="#resume">Resume</a>
+              <a href="#projects">Projects</a>
+              <a href="#insights">Insights</a>
+              <a href="scratch.html">Career Planner</a>
+              <a href="bootstrap.html">Portfolio Preview</a>
+              <a href="investment.html">Stock Snapshot</a>
+            </div>
+          </div>
         </div>
       </nav>
 
       <section class="hero-content">
         <div class="hero-copy">
-          
+          <p class="eyebrow">Accounting Student</p>
           <h1>Lance Ellsworth</h1>
           <p class="headline">Future BYU accounting student</p>
           <p class="lede">
-            I am actively working toward a career in accounting and will be applying to the
-            BYU Accountancy program in the coming year. My background includes teaching,
-            operations support, process improvement, and technical work with Excel and VBA,
-            and I will be starting an accounting internship at doTERRA this summer.
+            Accounting-focused BYU student with a 4.0 GPA, proven teaching and leadership
+            experience, strong communication skills, and hands-on process improvement work
+            with Excel and VBA. I will be applying to the BYU Accountancy program in the
+            coming year and starting an accounting internship at doTERRA this summer.
           </p>
+          <div class="hero-metrics">
+            <div>
+              <strong>4.0</strong>
+              <span>GPA</span>
+            </div>
+            <div>
+              <strong>2029</strong>
+              <span>Expected graduation</span>
+            </div>
+            <div>
+              <strong>2+</strong>
+              <span>Years international service</span>
+            </div>
+          </div>
           <div class="cta-row">
             <a class="button primary" href="#resume">View Resume</a>
             <a class="button secondary" href="scratch.html">Open Career Planner</a>
@@ -52,13 +88,14 @@
         </div>
 
         <aside class="hero-card">
+          <p class="card-label">Current focus</p>
           <h2>Career Snapshot</h2>
           <ul>
-            <li>Currently enrolled at Brigham Young University with a 4.0 GPA</li>
-            <li>Polish Language Instructor at the Missionary Training Center</li>
-            <li>Technology Specialist and Vehicle Coordinator experience in Poland</li>
-            <li>Starting an accounting internship at doTERRA this summer</li>
-            <li>Applying to the BYU Accountancy program in the upcoming year</li>
+            <li>Maintaining a 4.0 GPA at Brigham Young University</li>
+            <li>Teaching Polish in a structured training environment at the MTC</li>
+            <li>Improving operations through logistics, systems support, and Excel automation</li>
+            <li>Starting an accounting internship at doTERRA in summer 2026</li>
+            <li>Preparing for admission to the BYU Accountancy program</li>
           </ul>
           <a
             class="text-link"
@@ -78,11 +115,10 @@
           <p class="section-label">Resume</p>
           <h2>Professional summary</h2>
           <p>
-            I am currently enrolled at Brigham Young University and bring a strong academic
-            record, international service experience, and practical operations support skills.
-            I am actively building toward a long-term accounting career, plan to apply to the
-            BYU Accountancy program in the upcoming year, and will expand that path this summer
-            through an accounting internship with doTERRA.
+            I bring a strong academic record, international experience, and practical
+            operations support skills that transfer well into accounting. My background has
+            strengthened my attention to detail, communication, organization, and ability to
+            learn quickly in high-responsibility environments.
           </p>
           <div class="profile-card">
             <img src="headshot.jpg" alt="Portrait of Lance Ellsworth" />
@@ -98,6 +134,7 @@
         <div class="resume-grid">
           <article class="card">
             <h3>Education</h3>
+            <p class="card-kicker">Academic background</p>
             <p><strong>Brigham Young University</strong></p>
             <p>Currently enrolled</p>
             <p>Provo, UT</p>
@@ -106,13 +143,15 @@
           </article>
           <article class="card">
             <h3>Experience</h3>
+            <p class="card-kicker">Current role</p>
             <p><strong>Polish Language Instructor</strong></p>
             <p>Missionary Training Center, Provo, UT</p>
             <p>December 2025 to Present</p>
-            <p>Teach 15 native English speakers and move learners from zero proficiency toward intermediate-high Polish.</p>
+            <p>Teach 15 native English speakers and help move learners from zero proficiency toward intermediate-high Polish.</p>
           </article>
           <article class="card">
             <h3>Upcoming Internship</h3>
+            <p class="card-kicker">Summer 2026</p>
             <p><strong>Accounting Intern</strong></p>
             <p>doTERRA</p>
             <p>Starting summer 2026</p>
@@ -120,19 +159,22 @@
           </article>
           <article class="card">
             <h3>Previous Service</h3>
+            <p class="card-kicker">International experience</p>
             <p><strong>Volunteer Missionary</strong></p>
             <p>The Church of Jesus Christ of Latter-day Saints, Poland</p>
             <p>July 2023 to July 2025</p>
-            <p>Supported mission office logistics, technology operations, fleet coordination, and process automation with Excel and VBA.</p>
+            <p>Supported mission office logistics, technology operations, fleet coordination, and process automation using Excel and VBA.</p>
           </article>
           <article class="card">
             <h3>Awards</h3>
+            <p class="card-kicker">Recognition</p>
             <p><strong>Vision and Alignment Badge</strong></p>
             <p>Received through Europe Area Badging: Vision &amp; Alignment.</p>
             <p>Recognized for leadership alignment, outcome-based instruction, contextual teaching, purposeful instruction, and empowering trainees to achieve meaningful goals.</p>
           </article>
           <article class="card">
             <h3>Skills & Languages</h3>
+            <p class="card-kicker">Core strengths</p>
             <p>Polish: Professional proficiency</p>
             <p>English: Native</p>
             <p>Technology: Microsoft Excel, VBA</p>
@@ -141,8 +183,32 @@
         </div>
       </section>
 
+      <section class="section strengths-section">
+        <p class="section-label">What I Bring</p>
+        <h2>Why I would be a strong addition to a team</h2>
+        <div class="strengths-grid">
+          <article class="strength-card">
+            <h3>Reliability</h3>
+            <p>Strong academic performance and consistent follow-through in demanding roles.</p>
+          </article>
+          <article class="strength-card">
+            <h3>Communication</h3>
+            <p>Experience teaching, training, and working across cultures with clarity and patience.</p>
+          </article>
+          <article class="strength-card">
+            <h3>Analytical Thinking</h3>
+            <p>Comfortable using Excel, VBA, and process-based problem solving to improve efficiency.</p>
+          </article>
+          <article class="strength-card">
+            <h3>Professional Growth</h3>
+            <p>Focused on building a long-term accounting career through hands-on experience and continued learning.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section" id="projects">
-        <p class="section-label">Project Links</p>
+        <p class="section-label">Selected Work</p>
+        <h2>Featured work</h2>
         <div class="project-grid">
           <a class="project-card" href="scratch.html">
             <span>Interactive tool</span>
@@ -199,6 +265,7 @@
     </main>
 
     <footer class="footer">
+      <p class="footer-note">Lance Ellsworth</p>
       <div class="footer-links">
         <a href="scratch.html">Career Planner</a>
         <a href="bootstrap.html">Portfolio Preview</a>

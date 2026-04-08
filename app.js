@@ -1,4 +1,29 @@
 const chartTarget = document.getElementById("focusChart");
+const waffleButton = document.getElementById("waffleButton");
+const wafflePanel = document.getElementById("wafflePanel");
+
+if (waffleButton && wafflePanel) {
+  waffleButton.setAttribute("aria-expanded", "false");
+  wafflePanel.hidden = true;
+
+  waffleButton.addEventListener("click", () => {
+    const isOpen = waffleButton.getAttribute("aria-expanded") === "true";
+    waffleButton.setAttribute("aria-expanded", String(!isOpen));
+    wafflePanel.hidden = isOpen;
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Node)) {
+      return;
+    }
+
+    if (!waffleButton.contains(target) && !wafflePanel.contains(target)) {
+      waffleButton.setAttribute("aria-expanded", "false");
+      wafflePanel.hidden = true;
+    }
+  });
+}
 
 if (chartTarget && window.Chart) {
   new Chart(chartTarget, {
